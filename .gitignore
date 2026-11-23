@@ -1,0 +1,66 @@
+## ---------------------------------------------------------------
+## .NET Build-Ausgaben
+## ---------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rm64/
+[Ll]og/
+publish/
+artifacts/
+*.nupkg
+*.snupkg
+project.lock.json
+project.assets.json
+*.nuget.props
+*.nuget.targets
+
+## ---------------------------------------------------------------
+## Test / Coverage
+## ---------------------------------------------------------------
+[Tt]est[Rr]esult*/
+*.trx
+coverage*.json
+coverage*.xml
+*.coverage
+
+## ---------------------------------------------------------------
+## JetBrains Rider – komplett ignorieren
+## ---------------------------------------------------------------
+.idea/
+*.iml
+
+# ReSharper / Rider: persönliche Settings (geteilte *.DotSettings bleiben drin)
+*.DotSettings.user
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+## ---------------------------------------------------------------
+## Visual Studio (falls doch mal jemand damit öffnet)
+## ---------------------------------------------------------------
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+## ---------------------------------------------------------------
+## Betriebssystem
+## ---------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+## ---------------------------------------------------------------
+## Testlogs nicht versehentlich einchecken
+## (enthalten Kundendaten, E-Mail-Adressen, interne URLs)
+## ---------------------------------------------------------------
+Log-*.txt
+*.log
+*.clef
