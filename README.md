@@ -1,29 +1,29 @@
 # Serilog Viewer
 
-Kleine WPF-App (.NET 8) zum schnellen Ansehen von Serilog-Logdateien im Format
+A small WPF app (.NET 8) for quickly viewing Serilog log files in the format
 
 ```
-2026-11-19 02:01:54.077 +01:00 [Information] [My.Source.Context] Nachricht
+2026-11-19 02:01:54.077 +01:00 [Information] [My.Source.Context] Message
 ```
 
-## Bedienung
+## Usage
 
-| Aktion | Wie |
+| Action | How |
 |---|---|
-| Log laden | Datei(en) ins Fenster ziehen, **Strg+O**, oder Text kopieren und **Strg+V** |
-| Nach Caller filtern | Links in der Liste klicken, **Strg+Klick** für mehrere |
-| Level ein-/ausblenden | Checkboxen oben (z. B. Debug aus) |
-| Suchen | **Strg+F**, sucht in Nachricht, Caller und Stacktrace; **Esc** leert |
-| Details / Stacktrace | Zeile anklicken → unten |
-| Nur diesen Caller | Rechtsklick auf eine Zeile |
+| Load a log | Drag file(s) into the window, press **Ctrl+O**, or copy text and press **Ctrl+V** |
+| Filter by caller | Click in the list on the left, **Ctrl+Click** to select multiple |
+| Show/hide levels | Checkboxes at the top (e.g. turn off Debug) |
+| Search | **Ctrl+F** searches message, caller and stack trace; **Esc** clears |
+| Details / stack trace | Click a row → shown below |
+| Only this caller | Right-click a row |
 
-Mehrere Dateien auf einmal werden chronologisch zusammengeführt.
-Die Datei kann gelesen werden, während die Anwendung noch hineinschreibt.
+Multiple files loaded at once are merged in chronological order.
+A file can be read while the application is still writing to it.
 
-## Aufbau
+## Structure
 
-- `SerilogParser.cs` – liest das Textformat; Zeilen ohne Zeitstempel (Stacktraces) gehören zum vorherigen Eintrag.
-  Den Regex hier anpassen, falls sich das `outputTemplate` ändert.
-- `LogEntry.cs` – ein Eintrag
-- `Models.cs` – Caller-Liste, Level-Filter, Farben
-- `MainWindow.xaml(.cs)` – Oberfläche
+- `SerilogParser.cs` – parses the text format; lines without a timestamp (stack traces) belong to the previous entry.
+  Adjust the regex here if the `outputTemplate` changes.
+- `LogEntry.cs` – a single log entry
+- `Models.cs` – caller list, level filter, colors
+- `MainWindow.xaml(.cs)` – user interface
