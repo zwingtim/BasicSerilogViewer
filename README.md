@@ -1,6 +1,6 @@
 # Serilog Viewer
 
-A small WPF app (.NET 8) for quickly viewing Serilog log files in the format
+A small WPF app (.NET 10) for quickly viewing Serilog log files in the format
 
 ```
 2026-11-19 02:01:54.077 +01:00 [Information] [My.Source.Context] Message
